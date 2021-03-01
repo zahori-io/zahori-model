@@ -5,7 +5,10 @@
 	<artifactId>zahori-model</artifactId>
 	<version>0.1.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>zahori-model</name>
+	<name>${project.artifactId}</name>
+
+	<description>Library containing the Test Base model for Zahori.io</description>
+	<url>https://zahori.io</url>
 
 	<organization>
 		<name>PANEL SISTEMAS INFORMATICOS,S.L</name>
@@ -98,6 +101,7 @@
 			<version>2.5.3</version>
 			<configuration>
 				<autoVersionSubmodules>true</autoVersionSubmodules>
+				<tagNameFormat>v@{project.version}</tagNameFormat>
 				<!-- <useReleaseProfile>false</useReleaseProfile> -->
 				<releaseProfiles>release</releaseProfiles>
 				<goals>deploy</goals>
