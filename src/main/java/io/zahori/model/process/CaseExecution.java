@@ -29,17 +29,22 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class CaseExecution {
 
     private int caseExecutionId;
-    private Object date;
-    private Object log;
-    private Object notes;
+    private String date;
+    private String log;
+    private String notes;
     private String status;
-    private Object steps;
+    private String steps;
     private Object stepsJson;
-    private Object video;
-    private Object doc;
-    private Object har;
+    private String video;
+    private String doc;
+    private String har;
+    private Integer durationSeconds;
     private Browser browser;
     private Case cas;
+
+    public CaseExecution() {
+        super();
+    }
 
     public int getCaseExecutionId() {
         return caseExecutionId;
@@ -49,27 +54,27 @@ public class CaseExecution {
         this.caseExecutionId = caseExecutionId;
     }
 
-    public Object getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Object date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public Object getLog() {
+    public String getLog() {
         return log;
     }
 
-    public void setLog(Object log) {
+    public void setLog(String log) {
         this.log = log;
     }
 
-    public Object getNotes() {
+    public String getNotes() {
         return notes;
     }
 
-    public void setNotes(Object notes) {
+    public void setNotes(String notes) {
         this.notes = notes;
     }
 
@@ -81,11 +86,11 @@ public class CaseExecution {
         this.status = status;
     }
 
-    public Object getSteps() {
+    public String getSteps() {
         return steps;
     }
 
-    public void setSteps(Object steps) {
+    public void setSteps(String steps) {
         this.steps = steps;
     }
 
@@ -97,28 +102,36 @@ public class CaseExecution {
         this.stepsJson = stepsJson;
     }
 
-    public Object getVideo() {
+    public String getVideo() {
         return video;
     }
 
-    public void setVideo(Object video) {
+    public void setVideo(String video) {
         this.video = video;
     }
 
-    public Object getDoc() {
+    public String getDoc() {
         return doc;
     }
 
-    public void setDoc(Object doc) {
+    public void setDoc(String doc) {
         this.doc = doc;
     }
 
-    public Object getHar() {
+    public String getHar() {
         return har;
     }
 
-    public void setHar(Object har) {
+    public void setHar(String har) {
         this.har = har;
+    }
+
+    public Integer getDurationSeconds() {
+        return durationSeconds;
+    }
+
+    public void setDurationSeconds(Integer durationSeconds) {
+        this.durationSeconds = durationSeconds;
     }
 
     public Browser getBrowser() {
