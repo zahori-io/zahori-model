@@ -25,6 +25,10 @@ package io.zahori.model;
 
 public class Status {
 
+	private Status() {
+		throw new IllegalStateException("Utility class");
+	}
+
 	public static final String PASSED = "Passed";
 	public static final String FAILED = "Failed";
 	public static final String NO_RUN = "No Run";
