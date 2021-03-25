@@ -28,7 +28,7 @@ import java.util.List;
 
 public class TestSet extends TestEntity {
 
-	private List<TestInstance> testInstances = new ArrayList<TestInstance>();
+	private List<TestInstance> testInstances = new ArrayList<>();
 
 	public TestSet(String id) {
 		super(id);

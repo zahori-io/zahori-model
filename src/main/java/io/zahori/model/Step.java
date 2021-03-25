@@ -39,7 +39,7 @@ public class Step extends TestEntity {
 	private String actual;
 	private String executionTime;
 	private String runId;
-	private List<Step> subSteps = new ArrayList<Step>();
+	private List<Step> subSteps = new ArrayList<>();
 
 	public Step(String id, String name, String status, String description) {
 		super(id);

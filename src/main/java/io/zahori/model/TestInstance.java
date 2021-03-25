@@ -28,7 +28,7 @@ import java.util.List;
 
 public class TestInstance extends TestEntity {
 
-	private List<Run> runs = new ArrayList<Run>();
+	private List<Run> runs = new ArrayList<>();
 
 	public TestInstance(String id) {
 		super(id);

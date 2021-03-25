@@ -36,7 +36,7 @@ public class Run extends TestEntity {
 	private String status = Status.PASSED;
 	private int duration = 0;
 	private String owner;
-	private List<Step> steps = new ArrayList<Step>();
+	private List<Step> steps = new ArrayList<>();
 
 	public Run(String id, String name, String status, int duration) {
 		super(id);

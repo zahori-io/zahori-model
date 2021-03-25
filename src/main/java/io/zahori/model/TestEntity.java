@@ -32,8 +32,8 @@ import java.util.Map;
 public class TestEntity {
 
 	private String id;
-	private List<File> attachments = new ArrayList<File>();
-	private Map<String, String> customFields = new HashMap<String, String>();
+	private List<File> attachments = new ArrayList<>();
+	private Map<String, String> customFields = new HashMap<>();
 
 	public TestEntity(String id) {
 		this.id = id;

@@ -33,7 +33,7 @@ public class TestCase extends TestEntity {
 	private String description;
 	private String status = Status.PASSED;
 	private int duration = 0;
-	private List<Step> steps = new ArrayList<Step>();
+	private List<Step> steps = new ArrayList<>();
 
 	public TestCase(String id, String name) {
 		super(id);
