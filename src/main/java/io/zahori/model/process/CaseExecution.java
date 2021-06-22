@@ -41,6 +41,7 @@ public class CaseExecution {
     private Integer durationSeconds;
     private Browser browser;
     private Case cas;
+    private Configuration configuration;
 
     public CaseExecution() {
         super();
@@ -148,6 +149,14 @@ public class CaseExecution {
 
     public void setCas(Case cas) {
         this.cas = cas;
+    }
+
+    public Configuration getConfiguration() {
+        return configuration;
+    }
+
+    public void setConfiguration(Configuration configuration) {
+        this.configuration = configuration;
     }
 
 }
