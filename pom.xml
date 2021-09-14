@@ -3,7 +3,7 @@
 
 	<groupId>io.zahori</groupId>
 	<artifactId>zahori-model</artifactId>
-	<version>0.1.5-SNAPSHOT</version>
+	<version>0.1.5</version>
 	<packaging>jar</packaging>
 	<name>zahori-model</name>
 
@@ -48,7 +48,7 @@
 		<connection>scm:git:git://github.com/zahori-io/zahori-model.git</connection>
 		<developerConnection>scm:git:git@github.com:zahori-io/zahori-model.git</developerConnection>
 		<url>https://github.com/zahori-io/zahori-model.git</url>
-		<tag>HEAD</tag>
+		<tag>v0.1.5</tag>
 	</scm>
 
 	<distributionManagement>
