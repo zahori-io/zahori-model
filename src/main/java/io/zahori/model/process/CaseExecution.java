@@ -23,6 +23,9 @@ package io.zahori.model.process;
  * #L%
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -38,6 +41,7 @@ public class CaseExecution {
     private String video;
     private String doc;
     private String har;
+    private List<Attachment> attachments = new ArrayList<>();
     private Integer durationSeconds;
     private Browser browser;
     private Case cas;
@@ -125,6 +129,24 @@ public class CaseExecution {
 
     public void setHar(String har) {
         this.har = har;
+    }
+
+    public List<Attachment> getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(List<Attachment> attachments) {
+        this.attachments = attachments;
+    }
+
+    public void addAttachment(String filepath) {
+        if (attachments == null) {
+            attachments = new ArrayList<>();
+        }
+
+        Attachment attachment = new Attachment();
+        attachment.setPath(filepath);
+        this.attachments.add(attachment);
     }
 
     public Integer getDurationSeconds() {
