@@ -31,6 +31,7 @@ public class Browser {
     private String browserName;
     private boolean active;
     private String defaultVersion;
+    private String version;
     private String icon;
     private int order;
 
@@ -56,6 +57,14 @@ public class Browser {
 
     public void setDefaultVersion(String defaultVersion) {
         this.defaultVersion = defaultVersion;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
     }
 
     public String getIcon() {

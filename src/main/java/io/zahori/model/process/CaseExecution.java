@@ -44,6 +44,7 @@ public class CaseExecution {
     private List<Attachment> attachments = new ArrayList<>();
     private Integer durationSeconds;
     private Browser browser;
+    private String screenResolution;
     private Case cas;
     private Configuration configuration;
 
@@ -163,6 +164,14 @@ public class CaseExecution {
 
     public void setBrowser(Browser browser) {
         this.browser = browser;
+    }
+
+    public String getScreenResolution() {
+        return screenResolution;
+    }
+
+    public void setScreenResolution(String screenResolution) {
+        this.screenResolution = screenResolution;
     }
 
     public Case getCas() {
