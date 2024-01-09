@@ -23,13 +23,16 @@ package io.zahori.model.process;
  * #L%
  */
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class CaseExecution {
+public class CaseExecution implements Serializable {
 
-    private int caseExecutionId;
+    private Long caseExecutionId;
+    private Long executionId;
+    private int executionTotalCases;
     private String date;
     private Long dateTimestamp;
     private String log;
@@ -41,6 +44,7 @@ public class CaseExecution {
     private String doc;
     private String har;
     private List<Attachment> attachments = new ArrayList<>();
+    private String evidencesPath;
     private Integer durationSeconds;
     private Browser browser;
     private String screenResolution;
@@ -51,12 +55,28 @@ public class CaseExecution {
         super();
     }
 
-    public int getCaseExecutionId() {
+    public Long getCaseExecutionId() {
         return caseExecutionId;
     }
 
-    public void setCaseExecutionId(int caseExecutionId) {
+    public void setCaseExecutionId(Long caseExecutionId) {
         this.caseExecutionId = caseExecutionId;
+    }
+
+    public Long getExecutionId() {
+        return executionId;
+    }
+
+    public void setExecutionId(Long executionId) {
+        this.executionId = executionId;
+    }
+
+    public int getExecutionTotalCases() {
+        return executionTotalCases;
+    }
+
+    public void setExecutionTotalCases(int executionTotalCases) {
+        this.executionTotalCases = executionTotalCases;
     }
 
     public String getDate() {
@@ -155,6 +175,14 @@ public class CaseExecution {
         Attachment attachment = new Attachment();
         attachment.setPath(filepath);
         this.attachments.add(attachment);
+    }
+
+    public String getEvidencesPath() {
+        return evidencesPath;
+    }
+
+    public void setEvidencesPath(String evidencesPath) {
+        this.evidencesPath = evidencesPath;
     }
 
     public Integer getDurationSeconds() {
