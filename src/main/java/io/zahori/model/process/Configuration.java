@@ -1,8 +1,5 @@
 package io.zahori.model.process;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /*-
  * #%L
  * zahori-model
@@ -27,9 +24,12 @@ import java.util.List;
  */
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Configuration {
+public class Configuration implements Serializable {
 
     public static final String LOG = "Log";
     public static final String SCREENSHOT = "Screenshot";
@@ -42,11 +42,7 @@ public class Configuration {
     private String environmentUrl;
     private int retries;
     private long timeout;
-    private boolean uploadResults;
-    private String uploadRepositoryName;
-    private String uploadRepositoryUrl;
-    private String uploadRepositoryUser;
-    private String uploadRepositoryPass;
+    private Tms tms = new Tms();
     private String generateEvidences;
     private List<String> generateEvidencesTypes = new ArrayList<>();
 
@@ -94,44 +90,12 @@ public class Configuration {
         this.timeout = timeout;
     }
 
-    public boolean isUploadResults() {
-        return uploadResults;
+    public Tms getTms() {
+        return tms;
     }
 
-    public void setUploadResults(boolean uploadResults) {
-        this.uploadResults = uploadResults;
-    }
-
-    public String getUploadRepositoryName() {
-        return uploadRepositoryName;
-    }
-
-    public void setUploadRepositoryName(String uploadRepositoryName) {
-        this.uploadRepositoryName = uploadRepositoryName;
-    }
-
-    public String getUploadRepositoryUrl() {
-        return uploadRepositoryUrl;
-    }
-
-    public void setUploadRepositoryUrl(String uploadRepositoryUrl) {
-        this.uploadRepositoryUrl = uploadRepositoryUrl;
-    }
-
-    public String getUploadRepositoryUser() {
-        return uploadRepositoryUser;
-    }
-
-    public void setUploadRepositoryUser(String uploadRepositoryUser) {
-        this.uploadRepositoryUser = uploadRepositoryUser;
-    }
-
-    public String getUploadRepositoryPass() {
-        return uploadRepositoryPass;
-    }
-
-    public void setUploadRepositoryPass(String uploadRepositoryPass) {
-        this.uploadRepositoryPass = uploadRepositoryPass;
+    public void setTms(Tms tms) {
+        this.tms = tms;
     }
 
     public String getGenerateEvidences() {
