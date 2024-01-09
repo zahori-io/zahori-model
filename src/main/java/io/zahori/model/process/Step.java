@@ -22,13 +22,14 @@ package io.zahori.model.process;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * #L%
  */
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Step {
+public class Step implements Serializable {
 
     private String id;
     private List<String> attachments = new ArrayList<>();

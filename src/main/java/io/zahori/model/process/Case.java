@@ -12,80 +12,80 @@ package io.zahori.model.process;
  * it under the terms of the GNU Affero General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * #L%
  */
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.io.Serializable;
 import java.util.Map;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Case {
-	private int caseId;
+public class Case implements Serializable {
 
-	private String name;
+    private int caseId;
 
-	private String active;
+    private String name;
 
-	private Object data;
+    private String active;
 
-	private Object clientTags;
+    private Object data;
 
-	private Map<String, String> dataMap;
+    private Object clientTags;
 
-	public int getCaseId() {
-		return this.caseId;
-	}
+    private Map<String, String> dataMap;
 
-	public void setCaseId(int caseId) {
-		this.caseId = caseId;
-	}
+    public int getCaseId() {
+        return this.caseId;
+    }
 
-	public String getName() {
-		return this.name;
-	}
+    public void setCaseId(int caseId) {
+        this.caseId = caseId;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return this.name;
+    }
 
-	public Map<String, String> getDataMap() {
-		return this.dataMap;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setDataMap(Map<String, String> dataMap) {
-		this.dataMap = dataMap;
-	}
+    public Map<String, String> getDataMap() {
+        return this.dataMap;
+    }
 
-	public String getActive() {
-		return active;
-	}
+    public void setDataMap(Map<String, String> dataMap) {
+        this.dataMap = dataMap;
+    }
 
-	public void setActive(String active) {
-		this.active = active;
-	}
+    public String getActive() {
+        return active;
+    }
 
-	public Object getData() {
-		return data;
-	}
+    public void setActive(String active) {
+        this.active = active;
+    }
 
-	public void setData(Object data) {
-		this.data = data;
-	}
+    public Object getData() {
+        return data;
+    }
 
-	public Object getClientTags() {
-		return clientTags;
-	}
+    public void setData(Object data) {
+        this.data = data;
+    }
 
-	public void setClientTags(Object clientTags) {
-		this.clientTags = clientTags;
-	}
+    public Object getClientTags() {
+        return clientTags;
+    }
+
+    public void setClientTags(Object clientTags) {
+        this.clientTags = clientTags;
+    }
 }
