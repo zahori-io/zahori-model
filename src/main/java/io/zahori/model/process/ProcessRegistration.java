@@ -31,6 +31,7 @@ public class ProcessRegistration implements Serializable {
     private Long clientId;
     private Long teamId;
     private Long procTypeId;
+    private String remote;
 
     public ProcessRegistration() {
         super();
@@ -47,7 +48,7 @@ public class ProcessRegistration implements Serializable {
     @Override
     public String toString() {
         return "ProcessRegistration [processId=" + processId + ", name=" + name + ", clientId=" + clientId + ", teamId=" + teamId + ", procTypeId=" + procTypeId
-                + "]";
+                + ", remote=" + remote + "]";
     }
 
     public Long getProcessId() {
@@ -88,6 +89,14 @@ public class ProcessRegistration implements Serializable {
 
     public void setProcTypeId(Long procTypeId) {
         this.procTypeId = procTypeId;
+    }
+
+    public String getRemote() {
+        return remote;
+    }
+
+    public void setRemote(String remote) {
+        this.remote = remote;
     }
 
 }
