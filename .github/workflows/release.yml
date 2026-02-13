@@ -24,7 +24,7 @@ jobs:
       attestations: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Set up JDK + Maven Central + GPG
         uses: actions/setup-java@v4
