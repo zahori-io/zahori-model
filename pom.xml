@@ -122,7 +122,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.3.1</version>
                 <!-- Note: 3.3.1 available -->
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
@@ -181,7 +181,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-release-plugin</artifactId>
-                        <version>3.1.1</version>
+                        <version>3.3.1</version>
                         <!-- Note: 3.3.1 available -->
                         <configuration>
                             <autoVersionSubmodules>true</autoVersionSubmodules>
